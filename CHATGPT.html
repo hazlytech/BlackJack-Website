@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Blackjack Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://images.ctfassets.net/93v9a59si7ol/2aHiswcjTt7sXcWtJ7JzAZ/c8759819f9bc7aabac9c6b86bc95ce66/top-view-of-blackjack-table.png?w=2320&h=1280&fm=webp&q=80&fit=thumb'); /* Change 'background.jpg' to your image file */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 600px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Add an overlay to make the text more readable */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Online Blackjack!</h1>
+        </header>
+        <main>
+            <section class="intro">
+                <p>Welcome to our exciting online blackjack game! Get ready for an adrenaline-pumping experience!</p>
+                <p>Enter your username below to start playing:</p>
+                <form id="username-form">
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                    <button type="submit">Start Playing</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Online Blackjack Game</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('username-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            alert('Welcome to the game, ' + username + '! You have received 200 game coins to start!');
+        });
+    </script>
+</body>
+</html>
